@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from "react-redux";
+import {store} from "./state";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+
+      {/*用 <Provider store={store}/> 把想要传递 store 的组件包起来*/}
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>
 );
 
