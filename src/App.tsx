@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import './App.css';
 import {actionCreator,State} from "./state";
 import {useDispatch, useSelector} from "react-redux";
 import {bindActionCreators} from "redux";
